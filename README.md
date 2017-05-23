@@ -1,2 +1,2 @@
 # Free-Code-Camp-algorithm-scripting
-Reposotory for FreeCodeCcamp algorithm chalanges
+Repository for FreeCodeCcamp algorithm chalanges
