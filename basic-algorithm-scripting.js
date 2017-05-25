@@ -124,7 +124,7 @@ function getIndexToIns(arr, num) {
 getIndexToIns([40, 60], 50);
 
 //	Caesars Cipher
-function rot13(str) {
+function rot13(str) { // LBH QVQ VG!
   function encode(character) {
     var charCode = character.charCodeAt();
     if(charCode >= 65 && charCode <= 90) {
@@ -132,10 +132,13 @@ function rot13(str) {
       }
     return character;
   }
+  function decode(character) {
+    return typeof character !== 'number' ? character : String.fromCharCode(character);
+  }
   return str
             .split('')
             .map(encode)
-            .map(item => typeof item !== 'number' ? item : String.fromCharCode(item))
+            .map(decode)
             .join('');
 }
 rot13("SERR PBQR PNZC");
